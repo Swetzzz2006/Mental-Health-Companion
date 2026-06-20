@@ -53,13 +53,12 @@ The features are extracted from user text:
 
 The model predicts one of the following mood categories:
 
-* Happy 😊
-* Sad 😔
-* Angry 😠
-* Anxious 😟
-* Neutral 😐
+* Happy 
+* Sad 
+* Angry 
+* Anxious 
+* Neutral 
 
----
 
 ## Technologies Used
 
