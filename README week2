@@ -1,0 +1,96 @@
+Week 2: Sentiment Analysis Enhancement & Emotion Detection
+Objective
+
+Enhance the chatbot's ability to understand the user's emotional state by analyzing text inputs and detecting specific emotions rather than only identifying positive or negative sentiment.
+
+1. Sentiment Analysis Enhancement
+
+Goal: Determine whether the user's message expresses:
+
+Positive sentiment
+Negative sentiment
+Neutral sentiment
+
+Implementation:
+
+Use NLP libraries such as:
+Python TextBlob
+VADER Sentiment Analyzer
+NLTK
+Transformers (BERT)
+
+Example:
+
+User Input	Sentiment
+"I had a wonderful day."	Positive
+"I feel exhausted and sad."	Negative
+"I completed my assignment."	Neutral
+
+2. Emotion Detection Feature
+
+Goal: Identify the user's specific emotions.
+
+Possible emotions:
+
+Happy
+Sad
+Angry
+Fear
+Anxiety
+Stress
+Surprise
+Neutral
+
+Example:
+
+User Message	Detected Emotion
+"I'm very anxious about my exams."	Anxiety
+"I feel lonely and depressed."	Sadness
+"I'm so excited today!"	Happiness
+"I'm frustrated with everything."	Anger
+3. Models and Libraries
+
+You can mention:
+
+Hugging Face Transformers
+BERT-based emotion classification models
+nrclex
+transformers pipeline
+
+Example:
+
+from transformers import pipeline
+
+classifier = pipeline(
+    "text-classification",
+    model="j-hartmann/emotion-english-distilroberta-base"
+)
+
+result = classifier("I feel stressed and overwhelmed.")
+print(result)
+
+4. System Workflow
+User enters text.
+Text preprocessing:
+Lowercasing
+Removing punctuation
+Tokenization
+Sentiment analysis performed.
+Emotion detection model predicts emotion.
+Mental health companion generates an empathetic response.
+
+5. Expected Outcome
+Better understanding of user emotions.
+More personalized responses.
+Early identification of stress, anxiety, or sadness.
+Improved user engagement and emotional support.
+Sample Project Outcome
+
+Input:
+"I have been feeling very lonely and stressed lately."
+
+Sentiment: Negative
+Emotion: Sadness, Stress
+
+Bot Response:
+"I'm sorry you're going through a difficult time. Would you like to talk about what has been causing these feelings?"
